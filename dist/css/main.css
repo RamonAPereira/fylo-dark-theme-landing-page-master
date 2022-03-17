@@ -18,12 +18,12 @@ h1,
 h2,
 h3,
 a {
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   color: white;
   font-weight: 700; }
 
 p {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   color: white;
   font-weight: 400;
   font-size: 14px; }

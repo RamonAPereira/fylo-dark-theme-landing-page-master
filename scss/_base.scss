@@ -48,14 +48,16 @@ $neutral: hsl(0, 0%, 100%);
 }
 
 //Typography
+$heading: "Raleway", sans-serif;
+$body-copy: "Open Sans", sans-serif;
 h1,
 h2,
 h3,
 a {
-  @include family("Raleway", $neutral, 700);
+  @include family($heading, $neutral, 700);
 }
 p {
-  @include family("Open Sans", $neutral, 400);
+  @include family($body-copy, $neutral, 400);
   font-size: 14px;
 }
 
