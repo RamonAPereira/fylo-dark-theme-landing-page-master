@@ -1,0 +1,37 @@
+body {
+  background-color: $main-bg;
+}
+.max-size {
+  max-width: 85%; //refactor with min-max
+  padding: 5% 0;
+  @include push--auto;
+}
+.header {
+  @include flex-box(row, space-between, center, 0);
+  background-color: $main-bg;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  padding: 1.5rem 5%;
+}
+.generic-section {
+  @include flex-box(column, space-between, center, 2rem);
+  text-align: center;
+  &__content {
+    @include flex-box(column, space-between, center, 2rem);
+  }
+  &__image {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .generic-section {
+    &__content {
+      max-width: 60%;
+    }
+    &__image {
+    }
+  }
+}

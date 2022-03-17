@@ -13,25 +13,50 @@ a {
   color: inherit;
   text-decoration: none;
 }
-p {
-  font-size: 14px;
+html {
+  scroll-behavior: smooth;
 }
+
 //colors
 $email-bg: hsl(217, 28%, 15%);
 $main-bg: hsl(218, 28%, 13%);
 $footer-bg: hsl(216, 53%, 9%);
 $testimonials: hsl(219, 30%, 18%);
+$callToAction: hsl(198, 60%, 50%);
+$callToAction--b: hsl(176, 68%, 64%);
 $error: hsl(0, 100%, 63%);
 $neutral: hsl(0, 0%, 100%);
+
+//mixins
+@mixin push--auto {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+@mixin flex-box($direction, $justify-content, $align-items, $gap) {
+  align-items: $align-items;
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify-content;
+  gap: $gap;
+}
+@mixin family($family, $color, $weight) {
+  font-family: $family;
+  color: $color;
+  font-weight: $weight;
+}
 
 //Typography
 h1,
 h2,
-h3 {
-  font-family: "Raleway", sans-serif;
+h3,
+a {
+  @include family("Raleway", $neutral, 700);
 }
 p {
-  font-family: "Open Sans", sans-serif;
+  @include family("Open Sans", $neutral, 400);
+  font-size: 14px;
 }
-//mixins
+
 //Utility

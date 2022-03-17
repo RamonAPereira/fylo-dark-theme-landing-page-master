@@ -1,0 +1,43 @@
+.logo {
+  max-width: 5rem;
+}
+.navbar {
+  @include flex-box(row, space-between, center, 1rem);
+  &__link {
+    font-size: 0.8rem;
+    color: $neutral;
+    opacity: 0.8;
+    &:hover {
+      opacity: 1;
+      text-decoration: underline; //not working
+    }
+  }
+}
+.section-title {
+  font-size: 1.4rem;
+}
+.button {
+  padding: 1rem 5.7rem;
+  background: $callToAction;
+  border-radius: 30px;
+  &:hover {
+    cursor: pointer;
+    background: $callToAction--b;
+    transition: all 0.2s ease-in;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .logo {
+    max-width: 8rem;
+  }
+  .button {
+    font-size: 18px;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .body-text {
+    font-size: 18px;
+  }
+}
