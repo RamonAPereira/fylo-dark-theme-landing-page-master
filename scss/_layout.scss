@@ -25,6 +25,14 @@ body {
     max-width: 100%;
   }
 }
+.features-section {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(auto, 4);
+  gap: 4rem;
+  justify-items: center;
+  align-items: center;
+}
 
 @media screen and (min-width: 800px) {
   .generic-section {
@@ -33,5 +41,9 @@ body {
     }
     &__image {
     }
+  }
+  .features-section {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
   }
 }

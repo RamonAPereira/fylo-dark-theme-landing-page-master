@@ -15,6 +15,9 @@
 }
 .section-title {
   font-size: 1.4rem;
+  &--small {
+    font-size: 1.2rem;
+  }
 }
 .button {
   padding: 1rem 5.7rem;
@@ -24,6 +27,14 @@
     cursor: pointer;
     background: $callToAction--b;
     transition: all 0.2s ease-in;
+  }
+}
+.card {
+  @include flex-box(column, space-between, center, 0.8rem);
+  text-align: center;
+  &__icon {
+    max-width: 4rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -39,5 +50,11 @@
   }
   .body-text {
     font-size: 18px;
+  }
+  .card {
+    max-width: 24rem;
+    &__icon {
+      max-width: 100%;
+    }
   }
 }

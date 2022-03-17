@@ -47,6 +47,8 @@ p {
 
 .section-title {
   font-size: 1.4rem; }
+  .section-title--small {
+    font-size: 1.2rem; }
 
 .button {
   padding: 1rem 5.7rem;
@@ -57,6 +59,17 @@ p {
     background: #65e2d9;
     transition: all 0.2s ease-in; }
 
+.card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.8rem;
+  text-align: center; }
+  .card__icon {
+    max-width: 4rem;
+    margin-bottom: 1rem; }
+
 @media screen and (min-width: 800px) {
   .logo {
     max-width: 8rem; }
@@ -65,7 +78,11 @@ p {
   .section-title {
     font-size: 2rem; }
   .body-text {
-    font-size: 18px; } }
+    font-size: 18px; }
+  .card {
+    max-width: 24rem; }
+    .card__icon {
+      max-width: 100%; } }
 
 body {
   background-color: #181f2a; }
@@ -105,6 +122,17 @@ body {
   .generic-section__image {
     max-width: 100%; }
 
+.features-section {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(auto, 4);
+  gap: 4rem;
+  justify-items: center;
+  align-items: center; }
+
 @media screen and (min-width: 800px) {
   .generic-section__content {
-    max-width: 60%; } }
+    max-width: 60%; }
+  .features-section {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%; } }
