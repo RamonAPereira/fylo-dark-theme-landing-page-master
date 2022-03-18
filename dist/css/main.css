@@ -49,6 +49,8 @@ p {
   font-size: 1.4rem; }
   .section-title--small {
     font-size: 1.2rem; }
+  .section-title--smaller {
+    font-size: 1.1rem; }
 
 .button {
   padding: 1rem 5.7rem;
@@ -57,6 +59,14 @@ p {
   .button:hover {
     cursor: pointer;
     background: #65e2d9;
+    transition: all 0.2s ease-in; }
+
+.link {
+  color: #65e2d9;
+  border-bottom: 1px solid #65e2d9;
+  font-size: 14px; }
+  .link:hover {
+    filter: invert(61%) sepia(92%) saturate(1464%) hue-rotate(166deg) brightness(85%) contrast(85%);
     transition: all 0.2s ease-in; }
 
 .card {
@@ -73,12 +83,15 @@ p {
 @media screen and (min-width: 800px) {
   .logo {
     max-width: 8rem; }
+  .section-title {
+    font-size: 2.3rem; }
+    .section-title--smaller {
+      font-size: 2.3rem; }
   .button {
     font-size: 18px; }
-  .section-title {
-    font-size: 2rem; }
   .body-text {
-    font-size: 18px; }
+    font-size: 18px;
+    max-width: 55ch; }
   .card {
     max-width: 24rem; }
     .card__icon {
@@ -88,7 +101,7 @@ body {
   background-color: #181f2a; }
 
 .max-size {
-  max-width: 85%;
+  max-width: 90%;
   padding: 5% 0;
   margin-left: auto;
   margin-right: auto; }
@@ -106,19 +119,23 @@ body {
   top: 0;
   padding: 1.5rem 5%; }
 
-.generic-section {
+.generic-section, .generic-section--row {
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 2rem;
   text-align: center; }
-  .generic-section__content {
+  .generic-section__content, .generic-section__content--justify {
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 2rem; }
+    .generic-section__content--justify {
+      text-align: left;
+      align-items: flex-start;
+      gap: 1rem; }
   .generic-section__image {
     max-width: 100%; }
 
@@ -131,8 +148,11 @@ body {
   align-items: center; }
 
 @media screen and (min-width: 800px) {
-  .generic-section__content {
+  .generic-section__content, .generic-section__content--justify {
     max-width: 60%; }
+  .generic-section--row {
+    flex-direction: row; }
   .features-section {
     grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%; } }
+    grid-template-rows: 50% 50%;
+    gap: 2rem; } }

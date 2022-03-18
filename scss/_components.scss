@@ -18,6 +18,9 @@
   &--small {
     font-size: 1.2rem;
   }
+  &--smaller {
+    font-size: 1.1rem;
+  }
 }
 .button {
   padding: 1rem 5.7rem;
@@ -26,6 +29,16 @@
   &:hover {
     cursor: pointer;
     background: $callToAction--b;
+    transition: all 0.2s ease-in;
+  }
+}
+.link {
+  color: $callToAction--b;
+  border-bottom: 1px solid $callToAction--b;
+  font-size: 14px;
+  &:hover {
+    filter: invert(61%) sepia(92%) saturate(1464%) hue-rotate(166deg)
+      brightness(85%) contrast(85%);
     transition: all 0.2s ease-in;
   }
 }
@@ -42,14 +55,19 @@
   .logo {
     max-width: 8rem;
   }
+  .section-title {
+    font-size: 2.3rem;
+    &--smaller {
+      font-size: 2.3rem;
+    }
+  }
   .button {
     font-size: 18px;
   }
-  .section-title {
-    font-size: 2rem;
-  }
+
   .body-text {
     font-size: 18px;
+    max-width: 55ch;
   }
   .card {
     max-width: 24rem;

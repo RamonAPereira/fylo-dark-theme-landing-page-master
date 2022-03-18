@@ -2,7 +2,7 @@ body {
   background-color: $main-bg;
 }
 .max-size {
-  max-width: 85%; //refactor with min-max
+  max-width: 90%; //refactor with min-max
   padding: 5% 0;
   @include push--auto;
 }
@@ -20,9 +20,20 @@ body {
   text-align: center;
   &__content {
     @include flex-box(column, space-between, center, 2rem);
+    &--justify {
+      @extend .generic-section__content;
+      text-align: left;
+      align-items: flex-start;
+      gap: 1rem;
+    }
   }
   &__image {
     max-width: 100%;
+  }
+
+  // to change flex-box on media and add pseudo elements
+  &--row {
+    @extend .generic-section;
   }
 }
 .features-section {
@@ -39,11 +50,13 @@ body {
     &__content {
       max-width: 60%;
     }
-    &__image {
+    &--row {
+      flex-direction: row;
     }
   }
   .features-section {
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
+    gap: 2rem;
   }
 }

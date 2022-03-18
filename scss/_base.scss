@@ -27,6 +27,9 @@ $callToAction--b: hsl(176, 68%, 64%);
 $error: hsl(0, 100%, 63%);
 $neutral: hsl(0, 0%, 100%);
 
+//images
+$bg-mobile: "../images/bg-curvy-mobile.svg";
+
 //mixins
 @mixin push--auto {
   margin: {
