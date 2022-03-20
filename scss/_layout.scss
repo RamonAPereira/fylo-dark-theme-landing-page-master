@@ -3,7 +3,7 @@ body {
 }
 .max-size {
   max-width: 90%; //refactor with min-max
-  padding: 5% 0;
+  padding: 12% 0;
   @include push--auto;
 }
 .header {
@@ -31,10 +31,16 @@ body {
     max-width: 100%;
   }
 
-  // to change flex-box on media and add pseudo elements
+  // to change flex-box on media
   &--row {
     @extend .generic-section;
+    //background-color: red;
   }
+}
+.testimonials {
+  position: relative;
+  @include flex-box(column, space-between, center, 2rem);
+  padding: 6rem 0;
 }
 .features-section {
   display: grid;
@@ -46,6 +52,9 @@ body {
 }
 
 @media screen and (min-width: 800px) {
+  .max-size {
+    padding: 5% 0;
+  }
   .generic-section {
     &__content {
       max-width: 60%;
@@ -58,5 +67,8 @@ body {
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
     gap: 2rem;
+  }
+  .testimonials {
+    flex-direction: row;
   }
 }

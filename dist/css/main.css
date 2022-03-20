@@ -79,6 +79,43 @@ p {
   .card__icon {
     max-width: 4rem;
     margin-bottom: 1rem; }
+  .card__box {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 0.5rem;
+    width: 100%; }
+  .card__profile-image {
+    max-width: 2.5rem;
+    border-radius: 50%; }
+  .card__name {
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 14px; }
+  .card__office {
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    font-weight: 400;
+    font-size: 12px; }
+  .card--text-left {
+    text-align: left; }
+  .card--bg {
+    background-color: #1c2431;
+    box-shadow: #0b1523 6px 2px 16px 0px, #0b1523 -6px -2px 16px 0px;
+    border-radius: 12px;
+    padding: 2rem; }
+  .card--quote::before {
+    content: "";
+    position: absolute;
+    top: 4rem;
+    left: -0.5rem;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: url("../images/bg-quotes.png");
+    background-repeat: no-repeat; }
 
 @media screen and (min-width: 800px) {
   .logo {
@@ -102,7 +139,7 @@ body {
 
 .max-size {
   max-width: 90%;
-  padding: 5% 0;
+  padding: 12% 0;
   margin-left: auto;
   margin-right: auto; }
 
@@ -139,6 +176,15 @@ body {
   .generic-section__image {
     max-width: 100%; }
 
+.testimonials {
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 6rem 0; }
+
 .features-section {
   display: grid;
   grid-template-columns: auto;
@@ -148,6 +194,8 @@ body {
   align-items: center; }
 
 @media screen and (min-width: 800px) {
+  .max-size {
+    padding: 5% 0; }
   .generic-section__content, .generic-section__content--justify {
     max-width: 60%; }
   .generic-section--row {
@@ -155,4 +203,6 @@ body {
   .features-section {
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
-    gap: 2rem; } }
+    gap: 2rem; }
+  .testimonials {
+    flex-direction: row; } }

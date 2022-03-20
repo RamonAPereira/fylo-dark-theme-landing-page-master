@@ -49,6 +49,44 @@
     max-width: 4rem;
     margin-bottom: 1rem;
   }
+  &__box {
+    @include flex-box(row, left, center, 0.5rem);
+    width: 100%;
+  }
+  &__profile-image {
+    max-width: 2.5rem;
+    border-radius: 50%;
+  }
+  &__name {
+    @include family($body-copy, $neutral, 700);
+    font-size: 14px;
+  }
+  &__office {
+    @include family($body-copy, $neutral, 400);
+    font-size: 12px;
+  }
+  &--text-left {
+    text-align: left;
+  }
+  &--bg {
+    background-color: $email-bg;
+    box-shadow: $footer-bg 6px 2px 16px 0px, $footer-bg -6px -2px 16px 0px;
+    border-radius: 12px;
+    padding: 2rem;
+  }
+  &--quote {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 4rem;
+      left: -0.5rem;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      background: url("../images/bg-quotes.png");
+      background-repeat: no-repeat;
+    }
+  }
 }
 
 @media screen and (min-width: 800px) {
