@@ -23,14 +23,24 @@
   }
 }
 .button {
-  padding: 1rem 5.7rem;
+  @include family($heading, $neutral, 700);
+  font-size: 1rem;
+  padding: 1rem 5rem;
   background: $callToAction;
   border-radius: 30px;
+  border: none;
+
   &:hover {
     cursor: pointer;
     background: $callToAction--b;
     transition: all 0.2s ease-in;
   }
+}
+.input {
+  padding: 1rem 1rem;
+  border-radius: 30px;
+  width: 100%;
+  border: none;
 }
 .link {
   color: $callToAction--b;

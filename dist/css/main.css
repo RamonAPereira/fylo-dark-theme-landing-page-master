@@ -28,6 +28,11 @@ p {
   font-weight: 400;
   font-size: 14px; }
 
+.p-1 {
+  padding: 2% 5%;
+  margin-left: auto;
+  margin-right: auto; }
+
 .logo {
   max-width: 5rem; }
 
@@ -53,13 +58,24 @@ p {
     font-size: 1.1rem; }
 
 .button {
-  padding: 1rem 5.7rem;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 1rem 5rem;
   background: #339ecc;
-  border-radius: 30px; }
+  border-radius: 30px;
+  border: none; }
   .button:hover {
     cursor: pointer;
     background: #65e2d9;
     transition: all 0.2s ease-in; }
+
+.input {
+  padding: 1rem 1rem;
+  border-radius: 30px;
+  width: 100%;
+  border: none; }
 
 .link {
   color: #65e2d9;
@@ -193,6 +209,60 @@ body {
   justify-items: center;
   align-items: center; }
 
+.email-section {
+  position: absolute;
+  background-color: #1c2431;
+  top: -100px;
+  left: 5%;
+  bottom: 570px;
+  right: 5%;
+  padding: 0.3rem;
+  border-radius: 12px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+  text-align: center; }
+  .email-section__form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.5rem; }
+
+.footer {
+  position: relative;
+  margin-top: 4rem;
+  padding-top: 12rem;
+  align-items: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  background-color: #0b1523; }
+  .footer__box {
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    font-weight: 400; }
+    .footer__box--row {
+      flex-direction: row;
+      justify-content: center; }
+      .footer__box--row > li {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0;
+        border: 1px solid white;
+        border-radius: 50%;
+        padding: 0.5rem; }
+
 @media screen and (min-width: 800px) {
   .max-size {
     padding: 5% 0; }
@@ -205,4 +275,6 @@ body {
     grid-template-rows: 50% 50%;
     gap: 2rem; }
   .testimonials {
+    flex-direction: row; }
+  .footer {
     flex-direction: row; } }

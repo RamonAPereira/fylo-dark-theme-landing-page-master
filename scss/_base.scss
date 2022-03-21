@@ -65,3 +65,7 @@ p {
 }
 
 //Utility
+.p-1 {
+  padding: 2% 5%;
+  @include push--auto;
+}
